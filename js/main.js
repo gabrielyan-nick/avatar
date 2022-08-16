@@ -17,3 +17,17 @@ $(function () {
     ],
   });
 });
+
+$(function () {
+  $(".header__nav").on("click", function () {
+    $(".menu").toggleClass("menu--active");
+  });
+});
+
+// const btn = document.querySelector('.header__nav'),
+//       menu = document.querySelector('.menu');
+
+// btn.addEventListener('click', () => {
+//   menu.classList.toggle('menu--active');
+// });
+

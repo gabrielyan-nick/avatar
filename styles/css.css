@@ -92,6 +92,26 @@ button {
   background-color: #c1a1d2;
 }
 
+
+.menu {
+  background-color:#f402a2;
+  margin-bottom: 420px;
+  transform: translateY(-200%);
+  transition: all 0.5s;
+}
+
+.menu--active {
+  transform: translateY(0%);
+}
+
+.menu__item {
+  font-size: 50px;  
+  padding: 20px 0;
+  width: 500px;
+  text-align: center;
+  
+}
+
 .header__content {
   background-image: url(../images/1.png);
   min-height: calc(100vh - 100px);
