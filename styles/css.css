@@ -351,6 +351,45 @@ button {
   object-fit: cover;
 }
 
+.timer {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 350px;
+  width: 25%;
+
+}
+
+.timer__block {
+  background-color:rgb(201, 148, 253);
+  width: 100px;
+  height: 120px;
+  opacity: 0.8;
+  text-align: center;
+  color:#070a1b;
+  font-weight: 300;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 30px;
+  padding-top: 15px;
+  box-shadow: 0px 5px 20px 10px #2a3170;
+
+  
+
+
+}
+
+.timer__block span {
+  font-size: 60px;
+  font-weight: 600;
+  padding-top: 20px;
+  display: block;
+  text-align: center;
+  color:#070a1b
+}
+
 @media (max-width: 1000px) {
   .design__interior {
     display: block;
