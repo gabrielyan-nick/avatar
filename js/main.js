@@ -31,12 +31,20 @@ window.addEventListener('DOMContentLoaded', () => {
   const deadline = '2022-09-01';
 
   function getTimeRemaining(endtime) {
-    const t = Date.parse(endtime) - Date.now(),
-          days = Math.floor(t / (1000 * 60 * 60 * 24)),
-          hours = Math.floor(t / (1000 * 60 * 60) % 24),
-          min = Math.floor(t / (1000 * 60) % 60),
-          sec = Math.floor((t / 1000) % 60);
+    let days, hours, min, sec;
+    const t = Date.parse(endtime) - Date.now();
 
+    if (t <= 0) {
+      days = 0,
+      hours = 0,
+      min = 0,
+      sec = 0
+    } else {
+      days = Math.floor(t / (1000 * 60 * 60 * 24)),
+      hours = Math.floor(t / (1000 * 60 * 60) % 24),
+      min = Math.floor(t / (1000 * 60) % 60),
+      sec = Math.floor((t / 1000) % 60);
+    }
     return {
       t,
       days, 
@@ -69,8 +77,8 @@ window.addEventListener('DOMContentLoaded', () => {
       const t = getTimeRemaining(endtime);
 
       days.innerHTML = getZero(t.days);
-      hours.innerHTML = getZero(t.hours);
-      min.innerHTML = getZero(t.min);
+      hours.innerHTML = getZero(t.hours); 
+      min.innerHTML = getZero(t.min);  
       sec.innerHTML = getZero(t.sec);
 
       if (t.t <= 0) {
